@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ResturentProject</string>
+    <string name="enter_your_email_id">Enter Your Email Id</string>
+    <string name="enter_your_password">Enter Your Password</string>
+    <string name="click_here_for_register">Click Here For Register</string>
+    <string name="login">Login</string>
+</resources>

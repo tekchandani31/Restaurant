@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainback"
+    tools:context=".Add">
+
+    <ImageView
+        android:layout_width="102dp"
+        android:layout_height="79dp"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.909" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="385dp"
+        android:layout_height="347dp"
+        android:background="@color/backclr"
+        app:cardBackgroundColor="@color/cardview_dark_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.666">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/edt_itemname"
+                android:layout_width="396dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:backgroundTint="@color/textbackgr"
+                android:ems="10"
+                android:hint="Item Name"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/edt_itemtype"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:backgroundTint="@color/textbackgr"
+                android:ems="10"
+                android:hint="Item Type"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/edt_price"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:backgroundTint="@color/textbackgr"
+                android:ems="10"
+                android:hint="Price"
+                android:inputType="numberDecimal" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/buttonback"
+                android:text="Add Item"
+                android:id="@+id/addnewitem"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/buttonback"
+                android:text="View menu items"
+                android:id="@+id/viewitems"/>
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

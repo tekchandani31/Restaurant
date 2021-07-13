@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Bill">
+
+    <LinearLayout
+        android:id="@+id/branding_info"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/logo"
+
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="50dp"
+            android:text="ABC Restaurant, Location"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/details_card"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+
+        android:layout_below="@id/branding_info"
+        android:gravity="center"
+        android:weightSum="2">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/restaurant_details_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="8dp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="120dp">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingStart="10dp"
+                android:text="Restaurant Details :"
+                android:textColor="#0076BB"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:paddingStart="10dp"
+                android:text="FROM"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView3"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:paddingStart="10dp"
+                android:text="ABC Restaurant"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="85dp"
+                android:paddingStart="10dp"
+                android:text="Restaurant Full \n Address"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="130dp"
+                android:layout_marginBottom="10dp"
+                android:paddingStart="10dp"
+                android:text="restaurant@gmail.com"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/client1_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="8dp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="120dp">
+
+            <TextView
+                android:id="@+id/textView_client1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingStart="10dp"
+                android:text="Client's Details :"
+                android:textColor="#0076BB"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView2_client1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:paddingStart="10dp"
+                android:text="TO"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edt_clientname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45dp"
+                android:paddingStart="8dp"
+                android:hint="Client's Name"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/edt_clientadd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="85dp"
+                android:paddingStart="10dp"
+                android:hint="Client's Full \nAddress"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edt_clientmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="130dp"
+                android:layout_marginBottom="10dp"
+                android:paddingStart="10dp"
+                android:hint="clients@gmail.com"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/invoice_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/details_card"
+        android:orientation="vertical"
+        android:paddingStart="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:weightSum="2">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Invoice No : "
+                android:textStyle="bold" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="123456" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:text="Due Date : "
+                android:textStyle="bold" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="17/07/2021" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <com.google.android.material.textview.MaterialTextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Invoice Date : "
+                android:textStyle="bold" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="15/07/2021" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/product_table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/invoice_details"
+        android:stretchColumns="1"
+        android:layout_marginTop="10dp"
+        >
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="5"
+            android:background="@drawable/table_row_bg"
+            android:gravity="center_vertical"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            >
+
+            <TextView
+                android:id="@+id/th_item_1"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
+                android:text="Items"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:ignore="RtlSymmetry" />
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/th_item_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="QTY"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/th_item_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="Price"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/th_item_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="Tax"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/th_item_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="Subtotal"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Coffee"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:gravity="center"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="60.00"
+                android:gravity="center"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12.00"
+                android:gravity="center"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="72.00"
+                android:gravity="center"/>
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="water"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:gravity="center"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20.00"
+                android:gravity="center"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4.00"
+                android:gravity="center"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="24.00"
+                android:gravity="center"/>
+
+
+        </TableRow>
+        <TableRow
+            android:layout_marginTop="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="cold coffee"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:gravity="center"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="80.00"
+                android:gravity="center"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="16.00"
+                android:gravity="center"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="96.00"
+                android:gravity="center"/>
+
+
+        </TableRow>
+
+    </TableLayout>
+
+
+    <LinearLayout
+        android:layout_below="@id/product_table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:layout_marginTop="30dp">
+
+        <TableLayout
+            android:layout_width="250dp"
+            android:layout_height="wrap_content">
+
+            <TableRow android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:background="@drawable/table_row_bg"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+                <TextView
+                    android:id="@+id/th_item_invoice"
+                    android:gravity="center"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+
+                    android:text="Invoice Summery"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:ignore="RtlSymmetry" />
+            </TableRow>
+
+            <TableRow android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+                <TextView
+                    android:id="@+id/subtotal_text"
+                    android:gravity="start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+
+                    android:text="Subtotal"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:ignore="RtlSymmetry" />
+                <TextView
+                    android:id="@+id/subtotal_price"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+
+                    android:text="192.00"
+                    android:textColor="@color/black"
+
+                    />
+            </TableRow>
+            <TableRow android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+                <TextView
+                    android:id="@+id/total_text"
+                    android:gravity="start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+
+                    android:text="Total"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:ignore="RtlSymmetry" />
+                <TextView
+                    android:id="@+id/total_price"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+
+                    android:text="192.00"
+                    android:textColor="@color/black"
+
+                    />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_print"
+        android:layout_below="@+id/product_table"
+        android:layout_marginTop="175dp"
+        android:layout_centerHorizontal="true"
+        android:text="Print Bill"
+        android:backgroundTint="@color/backclr"/>
+
+
+</RelativeLayout>
